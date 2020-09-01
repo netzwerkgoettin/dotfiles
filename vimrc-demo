@@ -1,0 +1,30 @@
+set nocompatible                    " Using Vim settings and not Vi
+
+set autoindent                      " Guess what?
+filetype plugin indent on           " Enable indenting for files
+set backspace=indent,eol,start      " Allow backspacing over indention/ line breaks/ insertion start
+set softtabstop=2                   " Indent 2 spaces when hitting TAB
+set shiftwidth=2                    " Indend 2 spaces when autoindent
+set tabstop=2                       " Show existing tab with 2 spaces width
+set expandtab                       " Convert tabs into spaces
+
+set number                          " Enable line numbers
+syntax on                           " Set syntax highlighting
+set showmatch                       " Show matching brackets
+set cursorline                      " Highlight line under cursor
+set cursorcolumn                    " Highlight column
+
+set laststatus=2                    " Show status line
+set statusline=%t                   " tail of filename
+set statusline+=\ %{&ff}            " File format
+set statusline+=\ %y                " Filetype
+set statusline+=\ %c,               " Cursor column
+set statusline+=%l/%L               " Cursor line/ total lines
+set statusline+=\ %P                " Percent through file
+
+set undofile                        " Undo history even between sessions
+set undodir=~/.vim/undo             " All undo files in one directory
+
+colorscheme desert                  " Setting nice colors
+highlight CursorLineNR ctermbg=red
+highlight CursorColumn ctermbg=LightMagenta
